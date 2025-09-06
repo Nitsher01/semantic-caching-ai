@@ -103,38 +103,7 @@ API examples:
 
 ### Integration Tests
 - **`SemanticCacheIT`** → end-to-end validation of caching against Postgres.
-- **`ModelComparisonIT`** → compares `nomic-embed-text` vs `mxbai-embed-large` on a toy FAQ set for **accuracy & latency**.
 
-Run tests:
-```bash
-./mvnw test
-```
-
-Sample output from `ModelComparisonIT`:
-```
-=== Embedding Model Comparison ===
-Model: nomic-embed-text    | accuracy: 0.75 | avg latency: 42.3 ms | dims: 768  | notes: OK
-Model: mxbai-embed-large   | accuracy: 1.00 | avg latency: 55.8 ms | dims: 1024 | notes: OK
-```
-
----
-
-## 📊 Why Compare Models?
-
-- **`nomic-embed-text` (768-dim)** → lightweight, fast, good for smaller workloads.
-- **`mxbai-embed-large` (1024-dim)** → higher dimensional vectors, generally more accurate at capturing semantics.
-- Tradeoff: latency vs accuracy.
-
----
-
-## 🔮 Next Steps
-
-- Support **recall@k** (e.g., top-3 semantic matches).
-- Benchmark caching hit-rate on larger datasets.
-- Add multi-model table support (`llm_cache_768`, `llm_cache_1024`) with model routing.
-- Deploy with Docker Compose (Postgres + Ollama + App).
-
----
 
 ## 🤝 Contributing
 
