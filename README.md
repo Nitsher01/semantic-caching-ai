@@ -1,5 +1,8 @@
 # 🚀 Semantic Cache with Ollama + Postgres + pgvector
 
+**Medium Story**
+https://medium.com/javarevisited/smarter-caching-in-ai-apps-building-semantic-caching-with-spring-boot-and-ollama-dca47a0338e2
+
 This project demonstrates how to build a **semantic caching layer** on top of an LLM-powered FAQ system using:
 
 - **[Ollama](https://ollama.com/)** for running local models
